@@ -28,23 +28,27 @@ void Time::getTime(){
 
 Time Time::operator-(Time t1){
   Time t3;
+  int hour,min,sec;
+  hour = h;
+  min = m;
+  sec = s;
   
-  if(s < t1.s){
-    s += 60;
-    m --;
+  if(sec < t1.s){
+    sec += 60;
+    min --;
   }
-  t3.s = s - t1.s;
+  t3.s = sec - t1.s;
 
-  if(m < t1.m){
-    m += 60;
-    h --;
+  if(min < t1.m){
+    min += 60;
+    hour --;
   }
-  t3.m = m - t1.m;
+  t3.m = min - t1.m;
     
-  if(h < t1.h){
-    h += 24;
+  if(hour < t1.h){
+    hour += 24;
   }
-  t3.h = h - t1.h;
+  t3.h = hour - t1.h;
   
   return t3;
 }

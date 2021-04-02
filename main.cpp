@@ -11,6 +11,8 @@ int main() {
      cout<< "What time is it now?";
      t2.getTime();
      t3=t2-t1;
+     t1.display();
+     t2.display();
     t3.display();
    return 0;
 }
